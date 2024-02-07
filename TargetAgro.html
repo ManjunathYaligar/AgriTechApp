@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+
+
+    <title>AgriTech | Home</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" href="ic_launcher_round.png" />
+    <!-------CSS----------->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="md/css/bootstrap.min.css">
+    <link rel="stylesheet" href="md/css/mdb.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="jquery.toast.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+
+    <style type="text/css">
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .loader {
+            position: relative;
+            text-align: center;
+            margin: 15px auto 35px auto;
+            z-index: 9999;
+            display: block;
+            width: 80px;
+            height: 80px;
+            border: 10px solid rgba(0, 0, 0, .3);
+            border-radius: 50%;
+            border-top-color: #21b30e;
+            animation: spin 1s ease-in-out infinite;
+            -webkit-animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes spin {
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        .modal-content {
+            border-radius: 0px;
+            box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-backdrop.show {
+            opacity: 0.85;
+        }
+
+        .loader-txt {
+            p {
+                font-size: 13px;
+                color: #666;
+                small {
+                    font-size: 11.5px;
+                    color: #999;
+                }
+                ;
+            }
+        }
+
+        /* Additional styles for product images and details */
+       
+        .product-card {
+            animation: bubbleAnimation 1s ease-in-out;
+        }
+
+        @keyframes bubbleAnimation {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: #666;
+        }
+    
+    </style>
+
+</head>
+
+<body>
+
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg  navbar-light white-color sticky-top " align="center" id="MainNavbar">
+
+        <a class="navbar-brand" href="#"><span><img src="images/Target LOGO.jpg" id="brand"
+                    class="d-inline-block align-center"></a>
+
+        </li>
+
+       
+       
+
+        <div class="input-group form-inline ml-auto col-sm-10 col-lg-4 searchBarClass">
+            <input class="form-control my-0 py-1" type="text" placeholder="Search" id="myInput" onfocusout="hidediv()">
+            <div class="input-group-append">
+                <span class="input-group-text" id="searchBtn"><i class="fas fa-search" aria-hidden="true"
+                        id="searchIcon"></i></span>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+
+            <ul class="nav navbar-nav ml-auto">
+
+
+                <li class="nav-item active-nav-item">
+                    <a class="nav-link" href="homepage.html">HOME</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="">Products </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="career.html">Careers</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+    </nav>
+    <!-- navbar  -->
+    <!-- main slider -->
+    <div class="row no-gutters" id="mainProducts">
+        <div class="col-sm-12 col-lg-12">
+            <div id="mainSlider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+                <ol class="carousel-indicators">
+                    <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+                    <li data-target="#mainSlider" data-slide-to="1"></li>
+                    <li data-target="#mainSlider" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 sliderImageClass" src="images/Target-Agro-Chemical-1-31-2024 (6).gif">
+                    </div>
+                   
+                </div>
+
+
+                <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- main slider -->
+    <div class="container-fluid p-5 d-none d-md-block">
+
+        <div class="card py-4 px-5">
+            <div class="text-center ">
+                <p class="font-weight-bold mb-2" style="font-size:22px;color: black;">About Target Agro Chemical</p>
+            </div>
+            <hr style="width:100px;margin-top:-2px;" class="mb-4 pb-4 mx-auto">
+
+            <!-- intro -->
+            <div class="container mt-0 mt-md-5">
+                <section class=" dark-grey-text">
+                    <div class="row align-items-center mt-2 mb-2">
+
+                        <div class="col-lg-6 mb-4 text-center text-md-left">
+                            <img class="image-fluid" src="images/target logo final-01.jpg" style="width: 250px;margin-left: -15px; margin-top: -20px;" />
+                            <!-- <p class="lead text-muted">Beautifully designed by best interior designers for the best web designers</p> -->
+                            <p class="text-muted" style="text-align: justify;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Target is a E-shopping platform for poor farmers, which is the first E-shop in pune region to launch complete agro-products and services. We endeavour to provide agri-services
+                                by giving farmers quality products at minimum reasonable cost. We provide trusted and secured online shopping environment for product services related to agriculture, vast selection, low prices, fast and reliable delivery.
+                                It serves as a platform for the farmers to get tools and pesticides easily, quickly and at efficient rate. We are looking for new companies and innovation which will help farmers and boost their growth.</p>
+                        </div>
+
+                        <div class="col-lg-6 mb-4 ">
+
+                            <div class="d-grid mdb-lightbox">
+                                <figure class="item z-depth-1">
+                                    <a><img src="images/i1.jpg" /></a>
+                                </figure>
+                                <figure class="item z-depth-1">
+                                    <a><img src="images/i2.jpg" /></a>
+                                </figure>
+                                <figure class="item z-depth-1">
+                                    <a><img src="images/i3.jpg" /></a>
+                                </figure>
+                                <figure class="item z-depth-1">
+                                    <a><img src="images/i4.jpg" /></a>
+                                </figure>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <hr width="400px" class="mx-auto my-4 py-4">
+
+            <!-- vision misson -->
+            <div class="container">
+                <div class="row d-flex justify-content-center py-3 px-5">
+
+                    <div class="col-md-6 text-center border-right align-self-center py-3">
+                        <p style="font-size: 18px;border-left: 6px solid orange;border-radius: 4px;" class="pl-5 pr-4 py-2">" To be the leading platform providing farmer–responsive products and services for development of agricultural aspects across India."</p>
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-left px-5 align-self-center">
+                        <p style="color: green;font-weight: bold;font-size: 26px;">Our Vision</p>
+                    </div>
+
+                </div>
+
+                <div class="row d-flex justify-content-center py-3 px-5 mt-2">
+
+                    <div class="col-md-6  text-center text-md-right px-5 align-self-center">
+                        <p style="color: green;font-weight: bold;font-size: 26px;">Our Mission</p>
+                    </div>
+
+                    <div class="col-md-6 text-center  border-left align-self-center py-3">
+                        <p style="font-size: 18px;border-right: 6px solid orange; border-radius: 4px;" class="pr-5 pl-3 py-2">"Our mission is being a global network transforming agriculture to secure a sustainable future of farmers and sellers."</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr width="400px" class="mx-auto my-4 py-4">
+            <!-- teams -->
+            <div class="container-fluid p-5 d-none d-md-block">
+
+                <div class="card py-4 px-5">
+                    <div class="text-center ">
+                        <p class="font-weight-bold mb-2" style="font-size:22px;color: black;">Founder And Managing Director</p>
+                    </div>
+                    <hr style="width:100px;margin-top:-2px;" class="mb-4 pb-4 mx-auto">
+        
+                    <!-- intro -->
+                    <div class="container mt-0 mt-md-5">
+                        <section class=" dark-grey-text">
+                            <div class="row align-items-center mt-2 mb-2">
+        
+                                <div class="col-lg-6 mb-4 text-center text-md-left">
+                                    <img class="image-fluid" src="images/target logo final-01.jpg" style="width: 250px;margin-left: -15px; margin-top: -20px;" />
+                                    <!-- <p class="lead text-muted">Beautifully designed by best interior designers for the best web designers</p> -->
+                                    <p class="text-muted" style="text-align: justify;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Vivek Patil was born in Haveri, Randennur. He is a mechanical engineer who graduated from Manipal Institute of Technology and hails from a modest middle-class family with agricultural roots. 
+                                        As one of Target Agro Chemical' founder, he spearheads the company's mission to guarantee that its products combine innovation and optimization for farmers. With pesticides, he hopes to reach out to millions more farmers. 
+                                       </p>
+                                </div>
+        
+                                <div class="col-lg-6 mb-4 ">
+        
+                                    <div class="d-grid mdb-lightbox">
+                                        <figure class="item z-depth-1">
+                                            <a><img src="images/IMG_20240131_140054_784 (1).webp" /></a>
+                                        </figure>
+                                       
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+                        </section>
+                    </div>
+        
+                    <hr width="400px" class="mx-auto my-4 py-4">
+           
+
+    <!-- treding popular products -->
+    
+
+                <!-- controls next and previous -->
+
+                <a class="carousel-control-prev prevWrapperClass" href="#popularSlider" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon prevClass" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next nextWrapperClass" href="#popularSlider" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon nextClass" aria-hidden="true"></span>
+                </a>
+
+            </div>
+            <!-- trending products -->
+
+    </div>
+   
+
+
+    <!-- other products -->
+    <div class="container-fluid my-5" style="padding-left: 40px; padding-right: 40px;">
+        <h2 class="mb-2 pb-4 headingPopular text-center">Pesticides Products</h2>
+
+        <div class="row">
+            <!-- Sample Product Card (Replace with actual product details) -->
+            <div class="col-md-3 mb-4 product-card">
+                <div class="card h-100">
+                    <img src="images/download.jpg" class="card-img-top product-image" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Malathion EC</h5>
+                        <p class="card-text product-details" id="product1Details">Product 1 Description goes here.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" onclick="toggleProductDetails('product1')">Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat the above card structure for other products -->
+        </div>
+    </div>
+
+   
+    <!-- features and speciality -->
+    <div class="container-fluid py-4 z-depth-2 featuresClass">
+        <section class="p-md-2 mx-md-5 text-lg-left">
+
+            <div class="row text-center d-flex justify-content-center">
+                <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                    <img src="images/IMG_20231005_093642_205.jpg" id="secureImage">
+                    <h4 class="mb-4" id="secureText">Inauguration of Target Agro Chemical</h4>
+                    <p class="text-muted px-2 mb-lg-0">
+                            Company inaugurated in April 1st 2023.
+                    </p>
+                </div>
+               
+            </div>
+        </section>
+    </div>
+
+    
+
+    <!-- footer -->
+    <footer class="page-footer font-small unique-color-dark pt-4 z-depth-2">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-4 mx-auto">
+                    <img src="images/target logo final-01.jpg" class="footerLogo">
+                    <p>Plot No.20, 2nd Phase, Road No.25th
+                               Vasanth Narasapura Industrial Area, Tumkuru Tq, Dist Tumkur</p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase mt-3 mb-4 footerLinkClass">Company</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#!">Core Values</a>
+                        </li>
+                        <li>
+                            <a href="#!">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#!">Sitemap</a>
+                        </li> -->
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+                    <!-- Links -->
+                    <h5 class=" text-uppercase mt-3 mb-4 footerLinkClass">Policy Info</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Privacy Policy</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#!">Terms of Sale</a>
+                        </li> -->
+                        <li>
+                            <a href="#!">Terms of Use</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#!">Report Abuse</a>
+                        </li> -->
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-2 mx-auto">
+                    <!-- Links -->
+                    <h5 class="text-uppercase mt-3 mb-4 footerLinkClass">help</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="" data-toggle="modal" data-target="#modalContactForm">Contact Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+        <hr>
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1">
+                    <i class="fab fa-facebook-f"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1">
+                    <i class="fab fa-twitter"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-gplus mx-1">
+                    <i class="fab fa-google-plus-g"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-li mx-1">
+                    <i class="fab fa-linkedin-in"> </i>
+                </a>
+            </li>
+        </ul>
+        <script>
+            function toggleProductDetails(productId) {
+                var detailsElement = document.getElementById(productId + 'Details');
+                if (detailsElement.style.display === 'none') {
+                    detailsElement.style.display = 'block';
+                } else {
+                    detailsElement.style.display = 'none';
+                }
+            }
+        </script>
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+         <script>
+             function toggleProductDetails(productId) {
+                 var detailsElement = document.getElementById(productId + 'Details');
+                 if (detailsElement.style.display === 'none') {
+                     detailsElement.style.display = 'block';
+                 } else {
+                     detailsElement.style.display = 'none';
+                 }
+             }
+         </script>
+    
+    
+       
+</body>
+
+</html>
